@@ -1,0 +1,44 @@
+@import '../../globalFiles/vars';
+  
+.App 
+  width: 1200px
+  margin-left: calc((100% - 1200px)/2)
+  padding: 30px 
+  @media screen and (max-width: 1300px)
+    width: 100%
+    margin-left: 0
+  header
+    color: $gray-900
+    margin-bottom: 20px
+  .tasks
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    .task
+      padding: 10px
+      margin: 10px
+      border-radius: 5px
+      border: 1px solid $gray-500
+      &__number
+        color: $blue
+        display: flex
+        align-items: center
+        margin-bottom: 5px
+        span
+          font-size: 10px
+          margin-right: 10px
+      &__title
+        color: $gray-600
+      &:hover
+        cursor: pointer
+        background-color: $gray-200
+        
+    @media screen and (max-width: 500px)
+      display: block
+      .task
+        width: 100%
+        border-width: 1px 1px 0px 1px
+        margin: 0
+        border-radius: 0
+        &:last-child
+          border-bottom: 1px solid $gray-500
